@@ -48,7 +48,7 @@ jobs:
             sfdx force:auth:jwt:grant --clientid 3MVG9d8..z.hDcPJ5tp9B_Ychwf7qR64BMA6p8iDrBxWj7fUUMeEf6PkBcuq6QfeBCaHDbb16OsvSQCc6iajf --jwtkeyfile assets/server.key --username kishore@bandanadam.com --setdefaultdevhubusername --setalias KishoreDevHub1
             #sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDC_USER --setdefaultdevhubusername -a hub
             sfdx force --help
-            sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 2
+            sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 4
             sfdx force:source:push -u circle_build_$CIRCLE_BUILD_NUM
       - run:
           name: Run Apex Tests
